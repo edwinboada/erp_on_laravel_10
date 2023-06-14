@@ -23,7 +23,6 @@ class Plan extends Model
         'project',
     ];
 
-
     public static $arrDuration = [
         'unlimited' => 'Unlimited',
         'month' => 'Per Month',
@@ -48,8 +47,6 @@ class Plan extends Model
     {
         $free_plan = Plan::where('price', '<=', 0)->first()->id;
 
-        $total         = DB::raw('count(*) as total');
-        $string_total  = $total->getValue(DB::connection()->getQueryGrammar());
-        return User:: select($string_total)->where('type', '=', 'company')->where('plan', '!=', $free_plan)->groupBy('plan')->first();
+        return User::select(DB::raw('count(*) as total'))->where('type', '=', 'company')->where('plan', '!=', $free_plan)->groupBy('plan')->first();
     }
 }

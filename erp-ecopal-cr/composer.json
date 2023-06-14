@@ -12,6 +12,7 @@
         "doctrine/dbal": "^3.6",
         "firebase/php-jwt": "^6.5",
         "guzzlehttp/guzzle": "^7.2",
+        "gnumarquez/wa": "dev-master",
         "inertiajs/inertia-laravel": "^0.6.8",
         "kkomelin/laravel-translatable-string-exporter": "^1.21",
         "laravel/framework": "^10.10",

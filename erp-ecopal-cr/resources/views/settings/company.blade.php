@@ -129,8 +129,8 @@
                                 <div class="float-end"><i class="ti ti-chevron-right"></i></div></a>
                             <a href="#useradd-3" class="list-group-item list-group-item-action border-0">{{ __('Company Setting') }}
                                 <div class="float-end"><i class="ti ti-chevron-right"></i></div></a>
-                            <a href="#useradd-4" class="list-group-item list-group-item-action border-0">{{ __('Payment Setting') }}
-                                <div class="float-end"><i class="ti ti-chevron-right"></i></div></a>
+{{--                             <a href="#useradd-4" class="list-group-item list-group-item-action border-0">{{ __('Payment Setting') }}
+                                <div class="float-end"><i class="ti ti-chevron-right"></i></div></a> --}}
                             <a href="#useradd-5" class="list-group-item list-group-item-action border-0">{{ __('Zoom-Meeting Setting') }}
                                 <div class="float-end"><i class="ti ti-chevron-right"></i></div></a>
                             <a href="#useradd-6" class="list-group-item list-group-item-action border-0">{{ __('Slack Setting') }}
@@ -705,7 +705,7 @@
 
                     </div>
 
-                    <!--Payment Setting-->
+{{--                     <!--Payment Setting-->
                     <div id="useradd-4" class="card">
                         <div class="card-header">
                             <h5>{{ __('Payment Setting') }}</h5>
@@ -1270,7 +1270,7 @@
                         </div>
 
 
-                    </div>
+                    </div> --}}
 
                     <!--Zoom - Metting Setting-->
                     <div id="useradd-5" class="card">

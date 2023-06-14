@@ -37,18 +37,13 @@ class ChartOfAccount extends Model
 
     public function balance()
     {
-        $totalCredit         = DB::raw('sum(credit) as totalCredit');
-        $string_totalCredit  = $totalCredit->getValue(DB::connection()->getQueryGrammar());
-        $totalDebit          = DB::raw('sum(debit) as totalDebit');
-        $string_totalDebit   = $totalDebit->getValue(DB::connection()->getQueryGrammar());
-        $netAmount           = DB::raw('sum(credit) - sum(debit) as netAmount');
-        $string_netAmount    = $netAmount->getValue(DB::connection()->getQueryGrammar());
-        $journalItem         = JournalItem::select($string_totalCredit, $string_totalDebit, $string_netAmount)->where('account', $this->id);
+        $journalItem         = JournalItem::select(\DB::raw('sum(credit) as totalCredit'), \DB::raw('sum(debit) as totalDebit'), \DB::raw('sum(credit) - sum(debit) as netAmount'))->where('account', $this->id);
         $journalItem         = $journalItem->first();
         $data['totalCredit'] = $journalItem->totalCredit;
         $data['totalDebit']  = $journalItem->totalDebit;
         $data['netAmount']   = $journalItem->netAmount;
 
+        dd($data);
         return $data;
     }
 
